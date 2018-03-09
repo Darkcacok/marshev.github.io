@@ -8,7 +8,7 @@
 </head>
 
 <body>
-   
+
     <div class="head">
         <table width="100%">
             <tr>
@@ -29,12 +29,39 @@
         <table width="100%" border="1">
             <th width="20%">Полезные ссылки</th>
             <th>Лабы по курсу "Администрирование ИС"</th>
-            <tr>
+            <tr valign="top">
                 <td>
-
+                    <ul>
+                        <li>
+                            <a href="http://help.ubuntu.ru/wiki/%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_ubuntu_server/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C/user_management">Управление пользователями</a>
+                        </li>
+                    </ul>
                 </td>
                 <td align="center">
-                    <a href="labs/lab1AddUser.odt" download="lab1AddUser.odt">Лаба №1 Создание пользователя для себя, любимого</a>
+                    <br>
+                    <strong>Лаба №1 Создание пользователя для себя, любимого </strong>
+                    <p align="left">Задание:
+                        <br>1. Создать пользователя с использованием графической оболочки..
+                        <br>2. Создать пользователя в терминале программой adduser (или useradd).
+                        <br>Предварительно прочесть man.
+                        <br>
+                        <br>
+                        <strong>!!!!!!Все действия выполнялись в дистрибутиве
+                            <a href="https://neon.kde.org/">KDE neon 5.12</a>!!!!!</strong>
+                    </p>
+                    <p align="left">
+                        <strong>1.</strong> Заходим в настройки => Учетная запись => Управление пользователями => Добавить пользователя
+                        => Вводим все данные нажимаем применить.</p>
+                    <p align="center">
+                        <img src="picture/lab1scrn1.png" width="80%">
+                    </p>
+                    <p align="left">
+                        <strong>2.</strong>Открываем терминал вводим:
+                        <code>sudo useradd max</code>
+                        <br>Что бы задать пароль вводим:
+                        <code>sudo passwd max</code>
+                    </p>
+                    <a href="labs/lab1AddUser.odt" download="lab1AddUser.odt">Скачать документ</a>
                 </td>
             </tr>
         </table>
