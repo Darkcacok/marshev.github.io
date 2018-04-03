@@ -30,7 +30,7 @@
     <div class="middle">
         <table width="100%" border="1">
             <th width="20%">Полезные ссылки</th>
-            <th>Лабы по курсу "Администрирование ИС"</th>
+            <th>Лабораторные работы по курсу "Администрирование ИС"</th>
             <tr valign="top">
                 <td>
                     <ul>
@@ -41,7 +41,7 @@
                 </td>
                 <td align="center">
                     <br>
-                    <strong>Лаба №1 Создание пользователя для себя, любимого </strong>
+                    <strong>Лабораторная работа №1. Создание пользователя для себя, любимого </strong>
                     <p align="left">Задание:
                         <br>1. Создать пользователя с использованием графической оболочки..
                         <br>2. Создать пользователя в терминале программой adduser (или useradd).
@@ -66,41 +66,96 @@
                     <a href="labs/lab1AddUser.odt" download="lab1AddUser.odt">Скачать документ</a>
                 </td>
             </tr>
+            <tr valign="top">
+                <td>
+                    <ul>
+                        <li>
+                            <a href="http://help.ubuntu.ru/wiki/ssh">SSH</a>
+                        </li>
+                    </ul>
+                </td>
+                <td align="center">
+                    <br>
+                    <strong>Лабораторная работа №2. Настройка локальной сети в условиях отсутствия DNS </strong>
+                    <p align="left">
+                        <br>Задание:
+                        <br>Необходимо получить стандартно работающую локальную сеть, в которой доступ к другому компьютеру локальной
+                        сети обеспечивается:
+                        <br>а) при указании ip-адреса компьютера,
+                        <br>б) по полному имени компьютера,
+                        <br>в) по краткому имени компьютера.
+                    </p>
+                    <p align="left">
+                        <br>1. Нужно отредактировать файл на 2 компьютерах по адресу
+                        <code>/etc/hosts</code> и привести его к такому ввиду:
+                    </p>
+                    <p align="center">
+                        <img src="picture/lab2scrn1.png" width="80%">
+                    </p>
+                    <p align="left">
+                        <br>2. Настроить сеть
+                    </p>
+                    <p align="center">
+                        <img src="picture/lab2scrn2.png" width="80%">
+                    </p>
+                    <p align="center">
+                        <img src="picture/lab2scrn3.png" width="80%">
+                    </p>
+                    <p align="left">
+                        <br>3. Установить и настроить
+                        <a href="http://help.ubuntu.ru/wiki/ssh">ssh</a>
+                    </p>
+                    <p align="left">
+                        <br>4. Подключиться
+                    </p>
+                    <p align="center">
+                        <img src="picture/lab2scrn4.png" width="80%">
+                    </p>
+                </td>
+            </tr>
         </table>
     </div>
     <!-- Yandex.Metrika informer -->
-<p align="center"><a  href="https://metrika.yandex.ru/stat/?id=47983700&amp;from=informer"
-target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/47983700/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
-style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="47983700" data-lang="ru" /></a></p>
-<!-- /Yandex.Metrika informer -->
+    <p align="center">
+        <a href="https://metrika.yandex.ru/stat/?id=47983700&amp;from=informer" target="_blank" rel="nofollow">
+            <img src="https://informer.yandex.ru/informer/47983700/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;"
+                alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer"
+                data-cid="47983700" data-lang="ru" />
+        </a>
+    </p>
+    <!-- /Yandex.Metrika informer -->
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
+    <script type="text/javascript">
         (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
+            (w[c] = w[c] || []).push(function () {
                 try {
                     w.yaCounter47983700 = new Ya.Metrika({
-                        id:47983700,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true
+                        id: 47983700,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
                     });
-                } catch(e) { }
+                } catch (e) { }
             });
-    
+
             var n = d.getElementsByTagName("script")[0],
                 s = d.createElement("script"),
                 f = function () { n.parentNode.insertBefore(s, n); };
             s.type = "text/javascript";
             s.async = true;
             s.src = "https://mc.yandex.ru/metrika/watch.js";
-    
+
             if (w.opera == "[object Opera]") {
                 d.addEventListener("DOMContentLoaded", f, false);
             } else { f(); }
         })(document, window, "yandex_metrika_callbacks");
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/47983700" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/47983700" style="position:absolute; left:-9999px;" alt="" />
+        </div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 </body>
 
