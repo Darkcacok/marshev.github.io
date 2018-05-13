@@ -121,7 +121,17 @@
 
             <tr valign="top">
                 <td>
-                    <!---->
+                    <ul>
+                        <li>
+                            <a href="https://www.postgresql.org/">Официальный сайт PostgreSQL</a>
+                        </li>
+                        <li>
+                            <a href="https://community.vscale.io/hc/ru/community/posts/211866305-%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%BF%D0%B5%D1%80%D0%B2%D0%B8%D1%87%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-PostgreSQL-%D0%BD%D0%B0-Ubuntu-16-04">Первичная настройка СУБД</a>
+                        </li>
+                        <li>
+                            <a href="https://proft.me/2013/06/9/postgresql-spravochnik-po-komandam-psql-pg_dump/">Полезные команды</a>
+                        </li>
+                    </ul>
                 </td>
                 <td align="center">
                     <br>
@@ -201,6 +211,41 @@
                                     <br>&#8195(provider_id) REFERENCES provider
                                     <br>)
                         </code>
+                    </p>
+                    </p>
+                    <p align="center">
+                        <img src="picture/lab3scrn1.png" width="80%">
+                    </p>
+                    <p align="left">
+                        <br>5. Настройка удаленного подключения к СУБД
+                        <br>
+                        <br>В первую очередь нужно разрешить подключаться к
+                        <strong>postgresql</strong> с внешних
+                        <strong>ip</strong>. Для этого находим файл
+                        <strong>postgresql.conf</strong>
+                        (у меня находится в папке
+                        <strong>/etc/postgresql/10/main</strong>) и правим следующую строчку:
+                        <br>
+                        <code>listen_addresses = '*'</code>
+                        <br>
+                        <br>Обратите внимание, что нужно убрать перед директивой
+                        <strong>listen_addresses</strong> знак комментария #.
+                        <br>А в файле
+                        <strong>pg_hba.conf</strong> (лежит в там же, что и
+                        <strong>postgresql.conf</strong>) добавляем следующую строчку:
+                        <br>
+                        <code>hostssl all maxim 0.0.0.0/0 md5 </code>
+                        <br>
+                        <br>где:
+                        <br>
+                        <strong>hostssl</strong> - подключаемся через SSL
+                        <br>
+                        <strong>all</strong> - разрешаем подключение ко всем базам
+                        <br>
+                        <strong>maxim</strong> - имя пользователя, которому разрешаем подключение 0.0.0.0/0 - маска сети с которой
+                        можно подключаться
+                        <br>
+                        <strong>md5</strong> - способ шифрования пароля
                     </p>
                 </td>
             </tr>
