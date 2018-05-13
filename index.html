@@ -18,10 +18,15 @@
                     <img src="logo.svg" width="80%" alt="logo">
                 </td>
                 <td>
-                    <br>Вы попали на сайт Маршева Максима Сергеевича
-                    <br>Студент 3 курса МОАИС-15/1
-                    <br>Почта для связи со мной
-                    <a href="mailto:darkcacok1@gmail.com">darkcacok1@gmail.com</a>
+                    <br>
+                    <big>Вы попали на сайт Маршева Максима Сергеевича</big>
+                    <br>
+                    <big>Студент 3 курса МОАИС-15/1</big>
+                    <br>
+                    <big>Почта для связи со мной</big>
+                    <big>
+                        <a href="mailto:darkcacok1@gmail.com">darkcacok1@gmail.com</a>
+                    </big>
                 </td>
             </tr>
         </table>
@@ -110,6 +115,92 @@
                     </p>
                     <p align="center">
                         <img src="picture/lab2scrn4.png" width="80%">
+                    </p>
+                </td>
+            </tr>
+
+            <tr valign="top">
+                <td>
+                    <!---->
+                </td>
+                <td align="center">
+                    <br>
+                    <strong>Лабораторная работа №3. Работа с СУБД PostgreSQL — удалённый терминальный доступ </strong>
+                    <p align="left">
+                        <br>Задание:
+                        <br>1. Создать таблицы: moais31, mobila, provider, tarifs
+                        <br>2. Настроить удаленный доступ к СУБД
+                    </p>
+                    <p align="left">
+                        <br>1. Создание таблицы moais31
+                        <br>
+                        <code>
+                                <br>create table moais31
+                                <br>(
+                                    <br>&#8195id int UNIQUE,
+                                    <br>&#8195surName varchar(20) not null,
+                                    <br>&#8195name varchar(20) not null,
+                                    <br>&#8195patronymic varchar(20) not null,
+                                    <br>&#8195yearBirth interval YEAR not null,
+                                    <br>&#8195height int not null check(height>0),
+                                    <br>&#8195weight int not null check(weight>0),
+                                    <br>&#8195sex char(1) not null check(sex in ('м', 'ж')),
+                                    <br>&#8195mobile_id int not null,
+                                    <br>&#8195provider_id int not null,
+                                    <br>&#8195tarifs_id varchar(50) not null, 
+                                    <br>&#8195CONSTRAINT moais31_pk PRIMARY KEY (id),
+                                    <br>
+                                    <br>&#8195CONSTRAINT mobile_fk FOREIGN KEY
+                                    <br>&#8195(mobile_id) REFERENCES mobile,
+                                    <br>&#8195CONSTRAINT provider_fk FOREIGN KEY
+                                    <br>&#8195(provider_id) REFERENCES provider,
+                                    <br>&#8195CONSTRAINT tarifs_fk FOREIGN KEY
+                                    <br>&#8195(tarifs_id) REFERENCES tarifs
+                                    <br>)
+                        </code>
+                        <br>
+                        <br>2. Создание таблицы mobile
+                        <br>
+                        <code>
+                                <br>create table mobile
+                                <br>(
+                                    <br>&#8195id int UNIQUE,
+                                    <br>&#8195brand varchar(20) not null,
+                                    <br>&#8195model varchar(50) not null,
+                                    <br>&#8195battery int not null check(battery>0),
+                                    <br>&#8195camera bool not null,
+                                    <br>&#8195resolution int not null check(camera=true),
+                                    <br>&#8195CONSTRAINT mobile_pk PRIMARY KEY (id)
+                                    <br>)
+                        </code>
+                        <br>
+                        <br>3. Создание таблицы provider
+                        <br>
+                        <code>
+                                <br>create table provider
+                                <br>(
+                                    <br>&#8195id int UNIQUE,
+                                    <br>&#8195name varchar(20) not null,
+                                    <br>&#8195site varchar(40) not null,
+                                    <br>&#8195CONSTRAINT provider_pk PRIMARY KEY (id)
+                                    <br>)
+                        </code>
+                        <br>
+                        <br>4. Создание таблицы tarifs
+                        <br>
+                        <code>
+                                <br>create table tarifs
+                                <br>(
+                                    <br>&#8195name varchar(50) not null,
+                                    <br>&#8195provider_id int not null,
+                                    <br>&#8195speedIn int not null check(speedIn>0),
+                                    <br>&#8195tarif varchar(20) not null,
+                                    <br>&#8195CONSTRAINT tarif_id PRIMARY KEY (name),
+                                    <br>
+                                    <br>&#8195CONSTRAINT provider_fk FOREIGN KEY
+                                    <br>&#8195(provider_id) REFERENCES provider
+                                    <br>)
+                        </code>
                     </p>
                 </td>
             </tr>
