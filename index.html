@@ -71,6 +71,7 @@
                     <a href="labs/lab1AddUser.odt" download="lab1AddUser.odt">Скачать документ</a>
                 </td>
             </tr>
+            <!--Вторая строчка-->
             <tr valign="top">
                 <td>
                     <ul>
@@ -248,6 +249,44 @@
                         <strong>md5</strong> - способ шифрования пароля
                     </p>
                 </td>
+            </tr>
+            <!--Четвертая строчка-->
+            <tr valign="top">
+                <td>
+                    <ul>
+                        <li>
+                            <a href="http://puppylinux.com/">Puppy Linux</a>
+                        </li>
+                        <li>
+                            <a href="http://www.oldnix.org/fdisk-linux/">fdisk — Работа с утилитой в Linux</a>
+                        </li>
+                    </ul>
+                </td>
+                <td align="center">
+                    <br>
+                    <strong>Лабораторная работа №4. Установка Linux на flash-диск</strong>
+                    <p align="left">
+                        <br>Задание:
+                        <br>1. Создать загрузочную флешку
+                        <br>
+                        <br>Уметь
+                        <br>- настраивать сеть (выход в Internet);
+                        <br>- работа с диском с помощью программы fdisk;
+                        <br>- копировать с флэшки в «Мои документы» на винчестере и обратно.
+                    </p>
+                    <p align="left">
+                        <br>1. Создание загрузочной флешки
+                        <br>
+                        <br>Подключается флешка к разъему и выполняется команда
+                        <br>
+                        <code>sudo fdisk -l</code>
+                        <br>она покажет место монтирования usb примерно так
+                        <br>
+                        <code>/dev/sdb 2011276 4 2011272 1% /media/6BED-4100</code>
+                        <br>Далее воспользуемся командой dd (требует root-прав) для создания загрузочной флешки.
+                        <br>
+                        <code>dd if=/путь_к_установочному_образу/image.iso of=/dev/sdb</code>
+                    </p>
             </tr>
         </table>
     </div>
